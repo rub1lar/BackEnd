@@ -1,0 +1,37 @@
+<div class="container text-white">
+    <h1>Carrito de Compras</h1>
+    <table class="table">
+        <thead>
+            <tr class="text-white">
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Ver</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each carrito}}
+            <tr class="text-white">
+                <td>{{ producto.title }}</td>
+                <td>${{ producto.price }}.-</td>
+                <td>{{ cantidad }}</td>
+                <td>${{ multiply producto.price cantidad }}.-</td>
+                <td>
+                    <form action="/carts/{{ id }}" method="POST">
+                        <input type="hidden" name="id" value="{{ id }}">
+                        <button class="" type="submit">Ver</button>
+                    </form>
+                </td>
+            </tr>
+
+            {{/each}}
+            <tr>
+                <td colspan="3" class="text-right text-white">{{#with totalPrice}}
+                    TOTAL: ${{this}}.-
+                    {{/with}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

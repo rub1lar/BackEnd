@@ -1,0 +1,24 @@
+<div class="container text-center index_div">
+    <h1>Todos nuestros Productos</h1>
+</div>
+<section class="products">
+    <div id="product-container" class="container products">
+        {{#each products}}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src={{ thumbnail }} alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">{{ title }}</h4>
+                <p class="card-text">{{ description }} </p>
+                <h5 class="card-text">${{ price }}.- </h5>
+                <div class="Buttons_Pay">
+                    <form action="/carts/{{id}}" method="POST">
+                        <input type="hidden" name="id" value="{{id}}">
+                        <button type="submit" class="btn btn-secondary">Comprar</button>
+                    </form>
+                    <a href="/productsid/{{id}}" class="btn btn-secondary">Detalles</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

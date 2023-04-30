@@ -1,0 +1,40 @@
+<div class="container text-center index_div">
+    <h1>Nuestros Productos</h1>
+</div>
+
+<section class="products">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col" class="center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td class="ImgTable">
+                        <img src="{{thumbnail}}" alt="{{title}}">
+                    </td>
+                    <td>{{description}}</td>
+                    <td>${{price}}.-</td>
+                    <td class="buttonsTable">
+                        <a href="/productsedit/{{id}}" class="btn btn-primary">Editar</a>
+                        
+                        <form method="DELETE" action="/productsdeletebyid/{{id}}">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
