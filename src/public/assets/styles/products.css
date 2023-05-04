@@ -82,4 +82,39 @@ button{
     justify-content: flex-end;
 }
 .card-img, .card-img-top {
-    max-height: 315px;}
+    max-height: 315px;} 
+
+.agregado {
+    height: 100vh;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 4rem;
+   
+
+
+
+
+align-items: center;
+        background-color: black;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .agregado a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(30, 30, 166);
+        text-decoration: none;
+        background-color: aliceblue;
+        border-radius: 10px;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+max-width: 200px;
+max-height: 90px;
+        
+    }
+  

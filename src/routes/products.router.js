@@ -41,10 +41,13 @@ router.post('/', upload.single('thumbnail'), (req, res) => {
     const writeStream = fs.createWriteStream(newPath);
     fileStream.pipe(writeStream);
 
-    res.send(`
-    <p>Producto agregado exitosamente.</p>
+    res.render('agregado');
+ /*    res.send(`
+    <div >
+    <p class="text-center"> Producto agregado exitosamente.</p>
     <a href="/products">Volver</a>
-  `);
+    <div>
+  `); */
 });
 
 module.exports = router;

@@ -34,6 +34,6 @@ productForm.addEventListener('submit', evt => {
 
   productListElement.innerHTML += productCards;
   productForm.reset();
-});
+}); 
 
 
